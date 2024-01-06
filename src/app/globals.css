@@ -8,6 +8,48 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+
+
+@layer components {
+  .social__icons {
+    @apply text-background__color__white bg-background__color__secondary md:bg-background__color__white md:text-background__color__secondary h-[35px] w-[35px] flex justify-center items-center rounded-full
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  /* width: 2px; */
+  height: 7px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #536273;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #11263C;
+  border-radius: 5px;
+  width: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F05F30;
+  cursor: pointer;
+}
+
+@media screen and (max-width : 767px) {
+  ::-webkit-scrollbar {
+    /* width: 2px; */
+    display: none;
+  }
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,12 +58,4 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+body {}
